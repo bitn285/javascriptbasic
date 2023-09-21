@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+        // Nhập họ và tên
+        var hoTen = prompt("Nhập họ và tên: ");
+        
+        // Nhập giới tính
+        var gioiTinh = prompt("Nhập giới tính (Nam hoặc Nữ): ");
+        
+        // Tách họ, tên đệm và tên riêng biệt
+        var hoTenArray = hoTen.split(" ");
+        var ho = hoTenArray[0];
+        var tenDem = hoTenArray.slice(1, -1).join(" "); // Lấy từ index 1 đến (length - 1)
+        var ten = hoTenArray[hoTenArray.length - 1];
+    
+        //in ra họ tênđệm tên Riêng biệt
+        document.write("Họ: " + ho + "<br>");
+        document.write("Tên đệm: " + tenDem + "<br>");
+        document.write("Tên: " + ten + "<br>");
+        
+        // Thay đổi tên đệm dựa trên giới tính
+        if (gioiTinh === "Nam") {
+            tenDem = "Văn";
+        } else if (gioiTinh === "Nữ") {
+            tenDem = "Vẽ";
+        }
+        
+        // In ra kết quả
+        var tenMoi = ho + " " + tenDem + " " + ten;
+        document.write("Họ tên mới: " + tenMoi + "<br>");
+      </script>
+</body>
+</html>

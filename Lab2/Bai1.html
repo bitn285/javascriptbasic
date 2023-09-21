@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1</title>
+</head>
+<body>
+    <script>
+        var a = prompt("nhập số a :");
+        var b = prompt("nhập số b :");
+        var c = prompt("nhập số c :");
+        //
+        a = parseInt(a);
+        b = parseInt(b);
+        c = parseInt(c);
+        //delta
+        const delta = (b * b) - (4 * a *c);
+        if (delta < 0) {
+            document.write("chương trình vô nghiệm <br>"); 
+        }else if (delta === 0){
+            const x1_2 = -b / (2 *a);
+            document.write("x1 = x2 = " + x1_2 + "<br>");
+        }else {
+            const x1 = (-b - Math.sprt(delta)) / (2 * a);
+            const x2 = (-b + Math.sprt(delta)) / (2 * a);
+            document.write("x1 =" + x1);
+            document.write("x2 =" + x2);
+        }
+
+    </script>
+</body>
+</html>

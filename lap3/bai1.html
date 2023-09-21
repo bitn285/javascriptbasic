@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>điểm trung bình</title>
+</head>
+<body>
+    <script>
+        var diem = prompt("Mời bạn nhập điểm")
+        switch(true){
+            case diem < 5: 
+                console.log("Học sinh yếu")
+            break;
+            case  diem >= 5 && diem < 7:
+                console.log("học sinh trung bình")
+            break;
+            case diem >= 7 && diem < 9:
+                console.log("Học sinh khá")
+            break;
+            case diem >= 9 && diem <= 10: 
+                console.log("học sinh giỏi")
+            break;
+        }
+    </script>
+</body>
+</html>

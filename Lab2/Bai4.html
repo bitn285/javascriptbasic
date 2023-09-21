@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let mang = ["Tue", "Thu", "Sat", "Nine"];
+
+// Thêm các phần tử "Mon", "We", "Fri", "Sun" vào mảng
+mang.push("Mon");
+mang.push("We");
+mang.push("Fri");
+mang.push("Sun");
+
+// Xóa phần tử "Nine" nếu nó tồn tại trong mảng
+let index = mang.indexOf("Nine");
+if (index > -1) {
+    mang.splice(index, 1);
+}
+
+// Sắp xếp mảng theo thứ tự đúng của các ngày trong tuần (từ thứ 2 đến chủ nhật)
+let thuTu = ["Mon", "Tue", "We", "Thu", "Fri", "Sat", "Sun"];
+mang.sort(function(a, b) {
+    return thuTu.indexOf(a) - thuTu.indexOf(b);
+});
+
+document.write(mang);
+
+    </script>
+</body>
+</html>
